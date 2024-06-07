@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="startScreen" class="overlay">
+        <img src="doom_logo.gif"  width="20%" height="20%"  alt="Welcome" class="welcome-picture">
+        <div class="welcome-text">
+            <h1>Welcome to Flappy Bird</h1>
+            <p>This Flappy Bird clone is created by [Your Name].</p>
+            <p>How to play: Press Space or Tap to make the bird fly. Avoid hitting the pipes!</p>
+            <p>Are you ready? Press Space or Tap to Start</p>
+        </div>
+    </div>
+    <div id="gameOverScreen" class="overlay">
+        <h1>Game Over</h1>
+        <p id="finalScore"></p>
+        <p>Press Space or Tap to Restart</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
