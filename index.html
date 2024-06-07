@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird Clone</title>
+    <title>Escape From The Hell </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
     <div id="startScreen" class="overlay">
-        <img src="doom_logo.gif"  width="20%" height="20%"  alt="Welcome" class="welcome-picture">
+        <img src="doom_logo.gif"  width="240" height="100"  alt="Welcome" class="welcome-picture">
         <div class="welcome-text">
-            <h1>Welcome to Flappy Bird</h1>
-            <p>This Flappy Bird clone is created by [Your Name].</p>
-            <p>How to play: Press Space or Tap to make the bird fly. Avoid hitting the pipes!</p>
-            <p>Are you ready? Press Space or Tap to Start</p>
+            <h1>" Welcome To The Hell "</h1>
+            <p>How to play: <br><br> Press .."Space Bar".. to Jump ! <br> Help Doom Guy Escape form the Hell !</p>
+            <p>Are you ready? Press " Space Bar " to Start</p>
+            <p>This Game is created by <a href="https://github.com/MrPatchara" target="_blank" style="color: chartreuse;">[Patchara Al-umaree]</a></p>
+            <img src="doom-face.gif"  width="200" height="200"  alt="Doom Guy" class="doom-guy-picture">
         </div>
     </div>
     <div id="gameOverScreen" class="overlay">
-        <h1>Game Over</h1>
+        <center>
+            <img src="die.gif"  width="60%" height="60%"  alt="Game Over" class="game-over-picture">
+            <h1>GAME OVER <br> DOOM GUY DEAD !</h1>
+        </center>
+        <h3>Your Score: </h3>
         <p id="finalScore"></p>
-        <p>Press Space or Tap to Restart</p>
+        <p>Press ESC to Restart</p>
     </div>
     <script src="script.js"></script>
 </body>

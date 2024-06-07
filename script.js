@@ -1,9 +1,11 @@
+//Change bird flap to DOOM-GUY ohh Yeah!
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth > 480 ? 600 : window.innerWidth - 20;
-    canvas.height = window.innerHeight > 640 ? 800 : window.innerHeight - 20;
+    canvas.width = window.innerWidth > 480 ? 480 : window.innerWidth - 20;
+    canvas.height = window.innerHeight > 640 ? 640 : window.innerHeight - 20;
 }
 
 resizeCanvas();
@@ -18,8 +20,8 @@ pipeImg.src = 'pipe.png';
 let backgroundImg = new Image();
 backgroundImg.src = 'background.png';
 
-let flapSound = new Audio('flap.wav');
-let hitSound = new Audio('hit.wav');
+let flapSound = new Audio('dry-fart.mp3');
+let hitSound = new Audio('master dang.mp3');
 
 let bird = {
     x: 50,
@@ -163,13 +165,17 @@ function startGame() {
 }
 
 document.addEventListener('keydown', function (event) {
-    if (event.code === 'Space') {
+    if (event.code === 'Space' && !gameOver) {
         startGame();
+    } else if (event.code === 'Escape' && gameOver) {
+        resetGame();
     }
 });
 
 document.addEventListener('touchstart', function (event) {
-    startGame();
+    if (!gameOver) {
+        startGame();
+    }
 });
 
 gameLoop();
